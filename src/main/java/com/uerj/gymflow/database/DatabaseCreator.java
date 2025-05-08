@@ -89,7 +89,9 @@ public class DatabaseCreator {
                     "    valor_pago FLOAT," +
                     "    status_pagamento VARCHAR," +
                     "    fk_plano INTEGER," +
-                    "    FOREIGN KEY (fk_plano) REFERENCES Plano(id_plano)" +
+                    "    fk_aluno INTEGER," +
+                    "    FOREIGN KEY (fk_plano) REFERENCES Plano(id_plano)," +
+                    "    FOREIGN KEY (fk_aluno) REFERENCES Aluno(id_aluno)" +
                     ");";
             stmt.execute(sqlMensalidade);
             System.out.println("Tabela Mensalidade criada com sucesso.");
